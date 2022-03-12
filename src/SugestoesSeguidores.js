@@ -3,10 +3,10 @@ import SugestaoSeguidor from "./SugestaoSeguidor"
 
 const seguidores = [
     {foto: "assets/img/bad.vibes.memes.svg", nome: "bad.vibe.memes"},
-    {foto: "assets/img/bad.vibes.memes.svg", nome: "bad.vibe.memes"},
-    {foto: "assets/img/bad.vibes.memes.svg", nome: "bad.vibe.memes"},
-    {foto: "assets/img/bad.vibes.memes.svg", nome: "bad.vibe.memes"},
-    {foto: "assets/img/bad.vibes.memes.svg", nome: "bad.vibe.memes"}
+    {foto: "assets/img/chibirdart.svg", nome: "chibirdart"},
+    {foto: "assets/img/razoesparaacreditar.svg", nome: "razoesparaacreditar"},
+    {foto: "assets/img/adorable_animals.svg", nome: "adorable.animais"},
+    {foto: "assets/img/smallcutecats.svg", nome: "smallcutecats"}
 ]
 
 
@@ -18,11 +18,7 @@ export default function SugestoesSeguidores() {
                 <div>Ver tudo</div>
             </div>
 
-            <SugestaoSeguidor userFoto="assets/img/bad.vibes.memes.svg" userName="bad.vibes.memes"/>
-            <SugestaoSeguidor userFoto="assets/img/chibirdart.svg" userName="chibirdart"/>
-            <SugestaoSeguidor userFoto="assets/img/razoesparaacreditar.svg" userName ="razoes"/>
-            <SugestaoSeguidor userFoto="assets/img/adorable_animals.svg" userName="ame.animais"/>
-            <SugestaoSeguidor userFoto="assets/img/smallcutecats.svg" userName="smallcutecats"/>
+            {seguidores.map(user => <SugestaoSeguidor userFoto={user.foto}userName={user.nome}/>)}
         </div>
     )
 }
